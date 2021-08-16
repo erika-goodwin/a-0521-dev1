@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>em & rem</title>
+
+    <style>
+      /* root */
+      html {
+        font-size: 10px;
+      }
+
+      /* Parent */
+      #box-1 {
+        font-size: 20px;
+      }
+
+      #box-1 p {
+        font-size: 1.5em; /* Parent * 1.5 ->>> 30px  */
+      }
+
+      #box-1 ul {
+        font-size: 1.2em;
+      }
+
+      #bix-2 h3 {
+        font-size: 2rem;
+      }
+
+      #box-2 p {
+        font-size: 1rem; /* root * 1rem ->>> 10px */
+      }
+      #box-2 ul {
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box-1">
+      <h3>Box one</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, qui
+        unde reiciendis explicabo omnis illum eos. Quae, voluptas nulla
+        voluptatibus eveniet ipsam, mollitia aut cupiditate enim consequuntur
+        corrupti dolorum alias.
+      </p>
+
+      <!-- 20px * 1.2em -->
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>
+          3
+          <!-- 20px * 1.2em * 1.2em -->
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>
+              3
+              <!-- 20px * 1.2em * 1.2em * 1.2em -->
+              <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div id="box-2">
+      <h3>Box two</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, qui
+        unde reiciendis explicabo omnis illum eos. Quae, voluptas nulla
+        voluptatibus eveniet ipsam, mollitia aut cupiditate enim consequuntur
+        corrupti dolorum alias.
+      </p>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>
+          3
+          <!-- 20px * 1.2em * 1.2em -->
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>
+              3
+              <!-- 20px * 1.2em * 1.2em * 1.2em -->
+              <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

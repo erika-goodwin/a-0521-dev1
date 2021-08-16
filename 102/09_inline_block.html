@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline & Block Styling</title>
+
+    <style>
+      li {
+        /* change BLOCK element to inline element */
+        display: inline;
+      }
+      li a {
+        padding-right: 20px;
+      }
+
+      img {
+        /* change INLINE element to block element */
+        /* ONLY BLOCK can has MARGIN */
+        display: block;
+        margin: auto;
+        width: 50%;
+      }
+
+      .box {
+        /* display: inline;  ---> background corrupts */
+        display: inline-block;
+        width: 32%;
+        background: #f4f4f4;
+        padding: 20px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
+    </ul>
+    <br /><br />
+    <img src="./img/camera.jpg" alt="camera" />
+
+    <br /><br />
+    <div class="box">
+      <h3>box one</h3>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil dolores
+        quas deserunt veniam enim quod cum architecto veritatis cupiditate
+        assumenda ut natus provident iste, voluptates sequi nemo saepe, nesciunt
+        voluptatum.
+      </p>
+    </div>
+    <div class="box">
+      <h3>box two</h3>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil dolores
+        quas deserunt veniam enim quod cum architecto veritatis cupiditate
+        assumenda ut natus provident iste, voluptates sequi nemo saepe, nesciunt
+        voluptatum.
+      </p>
+    </div>
+    <div class="box">
+      <h3>box three</h3>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil dolores
+        quas deserunt veniam enim quod cum architecto veritatis cupiditate
+        assumenda ut natus provident iste, voluptates sequi nemo saepe, nesciunt
+        voluptatum.
+      </p>
+    </div>
+  </body>
+</html>

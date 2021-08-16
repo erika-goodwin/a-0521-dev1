@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: gray;
+        color: white;
+      }
+
+      h1 {
+        /* do not show everything */
+        display: none;
+      }
+
+      /* Smartphone */
+      @media (max-width: 500px) {
+        body {
+          background-color: rgb(228, 176, 176);
+        }
+        #smartphone h1 {
+          display: block;
+        }
+      }
+
+      /* tablet */
+      @media (min-width: 501px) and (max-width: 768px) {
+        body {
+          background-color: rgb(122, 206, 212);
+        }
+        #tablet h1 {
+          display: block;
+        }
+      }
+
+      /* Normal */
+      @media (min-width: 769px) and (max-width: 1200px) {
+        body {
+          background-color: rgb(138, 194, 152);
+        }
+        #normal h1 {
+          display: block;
+        }
+      }
+
+      /* widescreen */
+      @media (min-width: 1201px) {
+        body {
+          background-color: rgb(194, 181, 138);
+        }
+        #widescreen h1 {
+          display: block;
+        }
+      }
+
+      /* Landscape */
+      @media (mix-height: 768px) {
+        body {
+          background-color: rgb(169, 138, 194);
+        }
+        #landscape h1 {
+          display: block;
+        }
+      }
+    </style>
+
+    <!-- When you want to use external css file only for mobile size or something .... You can use this  -->
+    <!-- <link rel="stylesheet" href="css/mobile" screen and (max-width: 768px)>  -->
+  </head>
+
+  <body>
+    <div id="widescreen"><h1>Widescreen</h1></div>
+    <div id="normal"><h1>Normal</h1></div>
+    <div id="tablet"><h1>Tablet</h1></div>
+    <div id="smartphone"><h1>Smartphone</h1></div>
+    <!-- Landscape for the tablet -->
+    <div id="landscape"><h1>Landscape</h1></div>
+  </body>
+</html>

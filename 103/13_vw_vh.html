@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VW and VH units</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        /* this wont work */
+        /* height: 100%; */
+      }
+      header {
+        background: rgb(148, 148, 148);
+        text-align: center;
+        /* This wont work */
+        /* height: 100%; */
+        height: 50vh;
+        /* vh = % of the full screen height */
+
+        /* width: 50vw; */
+        /* wh = % of the full screen width */
+      }
+      header h1 {
+        font-size: 3rem;
+      }
+      header p {
+        margin: 1rem 0;
+      }
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        background-color: rgb(207, 207, 207);
+        color: rgb(83, 83, 83);
+        padding: 1rem 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime autem
+        saepe reprehenderit et sed atque accusantium ipsum exercitationem. Sequi
+        enim ab eveniet excepturi qui sapiente nulla dolor exercitationem odit
+        odio.
+      </p>
+      <a class="btn" href="#">Find out more ...</a>
+    </header>
+    <section>
+      <h3>About</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime autem
+        saepe reprehenderit et sed atque accusantium ipsum exercitationem. Sequi
+        enim ab eveniet excepturi qui sapiente nulla dolor exercitationem odit
+        odio.
+      </p>
+    </section>
+  </body>
+</html>
