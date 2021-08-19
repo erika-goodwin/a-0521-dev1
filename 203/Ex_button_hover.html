@@ -13,6 +13,13 @@
         font-family: "Roboto", sans-serif;
 
         background-color: rgb(26, 26, 39);
+        position: relative;
+      }
+
+      .box {
+        margin-top: 30px;
+        position: absolute;
+        left: 45%;
       }
 
       /*   Add the basic styles and effects below   */
@@ -23,7 +30,6 @@
         color: #ffa260;
 
         padding: 1rem 1.7rem;
-        margin: 50% 40%;
       }
 
       .btn:hover {
@@ -36,7 +42,9 @@
   </head>
 
   <body>
-    <button class="btn">Hover Me</button>
+    <div class="box">
+      <button class="btn">Hover Me</button>
+    </div>
   </body>
 </html>
 
