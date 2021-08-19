@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><nth-child></nth-child></title>
+    <style>
+      li {
+        list-style: none;
+        padding: 0.25rem;
+        margin: 0.25rem;
+      }
+      /* first child */
+      li:first-child {
+        background-color: coral;
+      }
+      /* last child */
+      li:last-child {
+        background-color: rgb(178, 230, 230);
+      }
+      /* Position 2 */
+      li:nth-child(2) {
+        background-color: darksalmon;
+      }
+      /* every 3ed */
+      li:nth-child(3n + 0) {
+        background-color: cornsilk;
+      }
+      /* every 3rd after 7  (7: off set)*/
+      li:nth-child(3n + 7) {
+        background-color: palegreen;
+      }
+
+      li:nth-child(odd) {
+        /* background-color: whitesmoke; */
+      }
+      li:nth-child(even) {
+        /* background-color: thistle; */
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <!-- li{$}*20 -->
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+      <li>11</li>
+      <li>12</li>
+      <li>13</li>
+      <li>14</li>
+      <li>15</li>
+      <li>16</li>
+      <li>17</li>
+      <li>18</li>
+      <li>19</li>
+      <li>20</li>
+    </ul>
+  </body>
+</html>

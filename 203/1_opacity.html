@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opacity and Alpha</title>
+
+    <style>
+      section {
+        width: 500px;
+        height: 500px;
+        background-color: lightpink;
+      }
+
+      #rgba {
+        width: 50%;
+        height: 50%;
+        /* apply to all background */
+        background-color: rgb(240, 245, 250, 0.7);
+      }
+
+      #opacity {
+        width: 50%;
+        height: 50%;
+        background-color: cornsilk;
+        /* apply to all include text and background */
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div id="rgba">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione neque,
+        alias officia sint quos perspiciatis, dicta quasi unde dolores eligendi,
+        iure eveniet blanditiis itaque tempore amet. Dolores nihil ullam
+        exercitationem?
+      </div>
+    </section>
+    <section>
+      <div id="opacity">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione neque,
+        alias officia sint quos perspiciatis, dicta quasi unde dolores eligendi,
+        iure eveniet blanditiis itaque tempore amet. Dolores nihil ullam
+        exercitationem?
+        <button>submit</button>
+      </div>
+      <button>submit</button>
+    </section>
+  </body>
+</html>

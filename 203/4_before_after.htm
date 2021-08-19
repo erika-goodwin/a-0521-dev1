@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>before & after</title>
+    <style>
+      body {
+        background-color: #333;
+        color: #fff;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      header {
+        position: relative;
+        text-align: center;
+        height: 100vh;
+
+        /* background: url(https://images.unsplash.com/photo-1629325828469-b9b66b9d94e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80)
+          no-repeat center center/cover;
+        opacity: 0.5; */
+      }
+      header main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      header::before {
+        content: "";
+        background: url(https://images.unsplash.com/photo-1629325828469-b9b66b9d94e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80)
+          no-repeat center center/cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+      }
+
+      .is-required::after {
+        content: "*";
+        padding-left: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <main>
+        <h1>Hello World</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste ab
+          facilis nesciunt maiores atque earum exercitationem deserunt dolore
+          consequatur quos? Deserunt, eius a! Nemo error deserunt commodi
+          sapiente modi sequi.
+        </p>
+      </main>
+    </header>
+
+    <section>
+      <h3>Some sub title</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quos
+        voluptas, dignissimos dolorem eveniet incidunt, voluptates suscipit
+        omnis, ad nobis accusamus? Nesciunt vitae explicabo officiis nobis atque
+        unde dolorem odit!
+      </p>
+      <form action="">
+        <label for="" class="is-required">Name</label>
+        <input type="text" />
+      </form>
+    </section>
+  </body>
+</html>
