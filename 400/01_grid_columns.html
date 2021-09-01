@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: grid;
+
+        /* grid-template-columns: 200px 200px 200px; */
+        /* grid-template-columns: 200px auto 200px; */
+        /* grid-template-columns: auto auto auto; */
+
+        /* 1fr = one full screen with 1 row */
+        /* 1fr 1fr = two item in a one row full screen */
+        /* grid-template-columns: 1fr 1fr 2fr; */
+        grid-template-columns: repeat(3, 100px);
+
+        /* row-gap column-gap */
+        gap: 1rem 5rem;
+        gap: 1rem;
+      }
+      .item {
+        padding: 3rem;
+        background-color: azure;
+        border: 1px solid #333;
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">Item1</div>
+      <div class="item">Item2</div>
+      <div class="item">Item3</div>
+      <div class="item">Item4</div>
+      <div class="item">Item5</div>
+      <div class="item">Item6</div>
+    </div>
+
+    <main>
+      <section>
+        <h3>Welcome to my page</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, culpa
+          voluptas numquam quo laboriosam commodi laudantium dolor ab rem
+          reiciendis suscipit fugit architecto atque, et sapiente, quis
+          asperiores veniam doloribus!
+        </p>
+      </section>
+      <aside>
+        <h3>Contact</h3>
+        <ul>
+          <li>Some company name</li>
+          <li>816 Granville</li>
+          <li>555-555-5555</li>
+        </ul>
+      </aside>
+    </main>
+  </body>
+</html>
