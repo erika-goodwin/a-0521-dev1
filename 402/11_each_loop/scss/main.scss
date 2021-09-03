@@ -1,0 +1,10 @@
+// Each Loops
+
+$colors: red green blue purple;
+
+@each $color in $colors {
+    .paragraph-#{$color} {
+        background-color: $color;
+    }
+}
+
