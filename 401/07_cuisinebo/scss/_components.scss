@@ -1,1 +1,50 @@
 // reusable selectors
+$color-orange: #d3ab55;
+$color-gray: #b9b8b8;
+$color-black: #262626;
+
+$bg-black: #262626;
+
+$font-ll: 80px;
+$font-lg: 40px;
+$font-md: 30px;
+$font-sm: 25px;
+$font-ss: 15px;
+
+$font1: "Nunito", sans-serif;
+$font2: "Dancing Script", cursive;
+$font3: "Josefin Sans", sans-serif;
+
+// btn
+.main-btn {
+  // width: 200px;
+  color: $color-orange;
+  border: 2px solid $color-orange;
+  background-color: $bg-black;
+  padding: 1rem 2rem;
+  font-size: $font-ss;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-top: 3rem;
+
+  &:hover {
+    color: $color-black;
+    background-color: $color-orange;
+  }
+}
+
+.card-overlay-btn {
+  width: 150px;
+  height: 40px;
+  color: $color-orange;
+  background-color: #fff;
+  font-family: $font3;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid $color-orange;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+}

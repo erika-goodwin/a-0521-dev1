@@ -1,1 +1,24 @@
 // variables, mixins, placeholder, root, *, html, body
+
+.\? {
+  box-shadow: inset 4px 4px rgb(236, 15, 170), inset -4px -4px rgb(236, 15, 170);
+}
+
+/* target all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  /* background-color: #fff; */
+  /* color: #252525; */
+  //   font-family: "Kaisei Tokumin", serif;
+}
+
+div {
+  display: block;
+}
