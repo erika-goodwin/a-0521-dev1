@@ -1,0 +1,20 @@
+@use 'base' as *;
+
+// reusable selectors
+
+.main-btn {
+  height: 3rem;
+  width: 20rem;
+  font-family: $font-2;
+  font-size: $fontsize-2;
+  background-color: $color-pink;
+  border: none;
+  border-radius: 1rem;
+  color: $color-white;
+  box-shadow: 5px 5px 5px 2px rgba(163, 118, 118, 0.3);
+
+  &:hover {
+    // background-color: $color-primary;
+    // color: $color-dark;
+  }
+}

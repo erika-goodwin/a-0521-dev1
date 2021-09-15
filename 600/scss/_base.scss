@@ -1,0 +1,39 @@
+$color-orange: #ffac81;
+$color-pink: #ff928b;
+$color-appricot: #fec3a6;
+$color-isabelline: #f8edeb;
+$color-yellow: #efe9ae;
+$color-green: #cdeac0;
+$color-black: rgb(0, 0, 0);
+$color-white: #fff;
+
+$font-1: "Lobster Two", cursive;
+$font-2: "Sawarabi Mincho", sans-serif;
+
+$fontsize-1: 50px;
+$fontsize-2: 35px;
+$fontsize-3: 20px;
+$fontsize-4: 15px;
+
+.\? {
+  box-shadow: inset 4px 4px rgb(236, 15, 170), inset -4px -4px rgb(236, 15, 170);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin linkStyle {
+  text-decoration: none;
+  color: $color-black;
+}
+
+@mixin flexraw {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flexcolCenter {
+  @include flexraw;
+  align-items: center;
+}

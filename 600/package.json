@@ -1,0 +1,16 @@
+{
+  "name": "14_test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass scss/main.scss css/main.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.39.0"
+  },
+  "dependencies": {},
+  "description": ""
+}

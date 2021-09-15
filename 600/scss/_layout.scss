@@ -1,0 +1,128 @@
+@use 'base' as *;
+
+.navbar {
+  background-color: $color-yellow;
+  height: 5rem;
+  position: relative;
+
+  &-title {
+    font-family: $font-1;
+    position: absolute;
+    top: 0;
+    left: 40%;
+
+    a {
+      @include linkStyle;
+      font-size: $fontsize-1;
+    }
+  }
+
+  &-navigation {
+    height: 100%;
+    padding: 0 2rem;
+    .nav-list {
+      @include flexraw;
+      justify-content: space-between;
+      align-content: center;
+      height: 100%;
+
+      &-item {
+        list-style: none;
+        @include flexcolCenter;
+      }
+      &-link {
+        @include linkStyle;
+        font-size: $fontsize-3;
+        font-family: $font-2;
+      }
+    }
+  }
+}
+
+.hero {
+  background-color: $color-isabelline;
+  //   height: 110vh;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+
+  &-box {
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    border-radius: 3rem;
+    padding: 2rem;
+    background-color: $color-appricot;
+    &-gallery {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1rem;
+      &-image:first-child {
+        grid-column: 1/2;
+        grid-row: span 2;
+      }
+      &-image {
+        //   grid-column: ;
+        // padding: 2rem 1rem;
+
+        img {
+          width: 100%;
+          //   height: auto;
+          object-fit: cover;
+
+          overflow: hidden;
+        }
+      }
+    }
+    &-comment {
+      p {
+        width: 80%;
+        margin: 0 auto;
+        font-size: $fontsize-2;
+        font-family: $font-2;
+        text-align: center;
+      }
+      &-btn {
+        padding: 2rem 0;
+        @include flexraw;
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
+.feature {
+  font-family: $font-2;
+  padding: 2rem 1rem;
+  &-top {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    h2 {
+      font-size: $fontsize-2;
+    }
+    p {
+      font-size: $fontsize-3;
+    }
+  }
+  &-bottom {
+    @include flexraw;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 2rem;
+    &-box {
+      width: 30%;
+    }
+    h3 {
+      font-size: $fontsize-3;
+    }
+    p {
+      font-size: $fontsize-4;
+    }
+  }
+}
+.menu {
+  @include flexraw;
+}
