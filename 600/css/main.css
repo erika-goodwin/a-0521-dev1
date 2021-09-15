@@ -1,18 +1,293 @@
-/* Error: expected "{".
- *     ,
- * 128 |   wid
- *     |      ^
- *     '
- *   scss/_layout.scss 128:6  @use
- *   scss/main.scss 2:1       root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a     \2577 \a 128 \2502    wid\a     \2502       ^\a     \2575 \a   scss/_layout.scss 128:6  @use\a   scss/main.scss 2:1       root stylesheet';
+.\? {
+  box-shadow: inset 4px 4px #ec0faa, inset -4px -4px #ec0faa;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.menu-imgbox .card img {
+  width: 100%;
+  height: 100%;
+}
+
+.infosns-accesscontact h1, .infosns-followus h1 {
+  font-family: "Lobster Two", cursive;
+  font-size: 50px;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.navbar {
+  background-color: #efe9ae;
+  height: 5rem;
+  position: relative;
+}
+.navbar-title {
+  font-family: "Lobster Two", cursive;
+  position: absolute;
+  top: 0;
+  left: 40%;
+}
+.navbar-title a {
+  text-decoration: none;
+  color: black;
+  font-size: 50px;
+}
+.navbar-navigation {
+  height: 100%;
+  padding: 0 2rem;
+}
+.navbar-navigation .nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  height: 100%;
+}
+.navbar-navigation .nav-list-item {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.navbar-navigation .nav-list-link {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-family: "Sawarabi Mincho", sans-serif;
+}
+
+.hero {
+  background-color: #f8edeb;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+.hero-box {
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+  border-radius: 3rem;
+  padding: 2rem;
+  background-color: #fec3a6;
+}
+.hero-box-gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+.hero-box-gallery-image:first-child {
+  grid-column: 1/2;
+  grid-row: span 2;
+}
+.hero-box-gallery-image img {
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+.hero-box-comment p {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 35px;
+  font-family: "Sawarabi Mincho", sans-serif;
+  text-align: center;
+}
+.hero-box-comment-btn {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.feature {
+  font-family: "Sawarabi Mincho", sans-serif;
+  padding: 2rem 1rem;
+}
+.feature-top {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+.feature-top h2 {
+  font-size: 35px;
+}
+.feature-top p {
+  font-size: 20px;
+}
+.feature-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.feature-bottom-box {
+  width: 30%;
+}
+.feature-bottom h3 {
+  font-size: 20px;
+}
+.feature-bottom p {
+  font-size: 15px;
+}
+
+.menu {
+  background-color: #cdeac0;
+  width: 100%;
+  padding: 2.5rem 0 1.5rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.menu-imgbox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.menu-imgbox .card {
+  width: 33.3333%;
+  position: relative;
+  padding-bottom: 1rem;
+  overflow: hidden;
+}
+.menu-imgbox .card-overlay {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 0.3rem 0.3rem 1rem black;
+}
+.menu-imgbox .card-overlay-heading {
+  font-family: "Lobster Two", cursive;
+  font-size: 50px;
+}
+.menu-imgbox .card-overlay-paragraph {
+  font-family: "Sawarabi Mincho", sans-serif;
+  font-size: 20px;
+}
+.menu-imgbox .card img {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: 1s all;
+}
+.menu-imgbox .card img:hover {
+  transform: scale(1.3);
+  background: linear-gradient(rgba(255, 255, 255, 0.575), rgba(255, 255, 255, 0.575));
+  opacity: 0.8;
+}
+
+.infosns {
+  padding: 2.5rem 5%;
+  display: flex;
+  flex-direction: row;
+}
+.infosns-accesscontact {
+  width: 60%;
+  padding: 1rem;
+}
+.infosns-accesscontact-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.infosns-accesscontact-box-contact {
+  width: 40%;
+  font-family: "Sawarabi Mincho", sans-serif;
+  font-size: 20px;
+  padding-top: 1rem;
+}
+.infosns-followus {
+  width: 45%;
+  padding: 1rem;
+}
+.infosns-followus-img {
+  width: 100%;
+  text-align: center;
+}
+.infosns-followus-img img {
+  width: 20rem;
+  padding-bottom: 2rem;
+}
+.infosns-followus-img p {
+  font-family: "Sawarabi Mincho", sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.infosns-followus-img ion-icon {
+  font-size: 40px;
+}
+
+.footer {
+  background-color: #efe9ae;
+  height: 7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-title {
+  font-family: "Lobster Two", cursive;
+  top: 0;
+  left: 40%;
+}
+.footer-title a {
+  text-decoration: none;
+  color: black;
+  font-size: 50px;
+}
+.footer-navigation {
+  width: 30%;
+  height: 100%;
+  padding: 0 2rem;
+}
+.footer-navigation .footer-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  height: 100%;
+}
+.footer-navigation .footer-list-item {
+  list-style: none;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer-navigation .footer-list-link {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-family: "Sawarabi Mincho", sans-serif;
+}
+.footer-copyright {
+  font-family: "Sawarabi Mincho", sans-serif;
+  font-size: 15px;
+}
+
+.main-btn {
+  height: 3rem;
+  width: 20rem;
+  font-family: "Sawarabi Mincho", sans-serif;
+  font-size: 35px;
+  background-color: #ff928b;
+  border: none;
+  border-radius: 1rem;
+  color: #fff;
+  box-shadow: 5px 5px 5px 2px rgba(163, 118, 118, 0.3);
+}
+
+/*# sourceMappingURL=main.css.map */
