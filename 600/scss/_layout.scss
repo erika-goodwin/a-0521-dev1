@@ -4,6 +4,10 @@
   background-color: $color-yellow;
   height: 5rem;
   position: relative;
+  width: 100%;
+  @media (max-width: 500px) {
+    height: 7rem;
+  }
 
   &-title {
     font-family: $font-1;
@@ -11,15 +15,35 @@
     top: 0;
     left: 40%;
 
+    @media (min-width: 769px) and (max-width: 1200px) {
+      left: 35%;
+    }
+    @media (min-width: 501px) and (max-width: 768px) {
+      left: 30%;
+    }
+    @media (max-width: 500px) {
+      text-align: center;
+      position: static;
+      height: 60%;
+    }
+
     a {
       @include linkStyle;
       font-size: $fontsize-1;
+      @media (max-width: 500px) {
+        font-size: $fontsize-2;
+      }
     }
   }
 
   &-navigation {
     height: 100%;
     padding: 0 2rem;
+    @media (max-width: 500px) {
+      height: 40%;
+      background-color: $color-white;
+    }
+
     .nav-list {
       @include flexraw;
       justify-content: space-between;
@@ -55,21 +79,41 @@
     &-gallery {
       display: grid;
       grid-template-columns: 2fr 1fr;
+      grid-template-rows: repeat(2, 1fr);
       gap: 1rem;
+
+      @media (min-width: 501px) and (max-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
+      }
+      @media (max-width: 500px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
+      }
+
       &-image:first-child {
         grid-column: 1/2;
         grid-row: span 2;
-      }
-      &-image {
-        //   grid-column: ;
-        // padding: 2rem 1rem;
 
+        @media (min-width: 501px) and (max-width: 768px) {
+          grid-column: 1/3;
+          grid-row: span 1;
+        }
+        @media (max-width: 500px) {
+          grid-column: 1/3;
+          grid-row: span 1.5;
+        }
+      }
+
+      &-image {
         img {
           width: 100%;
-          //   height: auto;
-          object-fit: cover;
 
+          object-fit: cover;
           overflow: hidden;
+        }
+        &-show {
+          display: none;
         }
       }
     }
@@ -80,6 +124,16 @@
         font-size: $fontsize-2;
         font-family: $font-2;
         text-align: center;
+        @media (min-width: 501px) and (max-width: 768px) {
+          width: 95%;
+          padding-top: 1rem;
+          font-size: $fontsize-2-3;
+        }
+        @media (max-width: 500px) {
+          width: 95%;
+          padding-top: 1rem;
+          font-size: $fontsize-3;
+        }
       }
       &-btn {
         padding: 2rem 0;
@@ -92,34 +146,63 @@
 
 .feature {
   font-family: $font-2;
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
+  @media (max-width: 500px) {
+    padding: 2rem 0.5rem;
+  }
   &-top {
     text-align: center;
     width: 80%;
     margin: 0 auto;
     padding-bottom: 3rem;
+    @media (max-width: 500px) {
+      width: 90%;
+    }
     h2 {
       font-size: $fontsize-2;
+      padding-bottom: 2rem;
+      @media (max-width: 500px) {
+        font-size: $fontsize-2-3;
+        padding-bottom: 1rem;
+      }
     }
     p {
       font-size: $fontsize-3;
+      @media (max-width: 500px) {
+        font-size: $fontsize-4;
+      }
     }
   }
   &-bottom {
     @include flexraw;
     justify-content: space-between;
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
     width: 90%;
     margin: 0 auto;
     text-align: center;
     padding-bottom: 2rem;
     &-box {
       width: 30%;
+      @media (max-width: 500px) {
+        width: 100%;
+        padding-bottom: 1rem;
+      }
     }
     h3 {
       font-size: $fontsize-3;
+      padding-bottom: 2rem;
+      @media (max-width: 500px) {
+        font-size: $fontsize-3-4;
+        padding-bottom: 1rem;
+      }
     }
     p {
       font-size: $fontsize-4;
+      @media (max-width: 500px) {
+        font-size: $fontsize-5;
+      }
     }
   }
 }
@@ -138,13 +221,21 @@
     .card {
       width: 33.3333%;
       position: relative;
-      padding-bottom: 1rem;
+      margin-bottom: 1rem;
       overflow: hidden;
+
+      @media (min-width: 501px) and (max-width: 768px) {
+        width: 50%;
+      }
+      @media (max-width: 500px) {
+        width: 50%;
+      }
 
       &-overlay {
         position: absolute;
         top: 30%;
         width: 100%;
+        z-index: 10;
 
         @include flexcol;
         color: $color-white;
@@ -152,15 +243,29 @@
         &-heading {
           font-family: $font-1;
           font-size: $fontsize-1;
+          @media (min-width: 769px) and (max-width: 1200px) {
+            font-size: $fontsize-2;
+          }
+          @media (min-width: 501px) and (max-width: 768px) {
+            font-size: $fontsize-2;
+          }
+          @media (max-width: 500px) {
+            font-size: 25px;
+            text-align: center;
+          }
         }
         &-paragraph {
           font-family: $font-2;
           font-size: $fontsize-3;
+          @media (max-width: 500px) {
+            font-size: $fontsize-4;
+          }
         }
         &:hover {
-          // opacity: 0.4;
+          opacity: 0.4;
         }
       }
+
       img {
         @extend %fullSpace;
 
@@ -186,47 +291,142 @@
       // img:hover {
       //   transform: scale(1.3);
       // }
+      &-showlater {
+        display: none;
+
+        @media (min-width: 501px) and (max-width: 768px) {
+          display: block;
+        }
+        @media (max-width: 500px) {
+          display: block;
+        }
+      }
     }
   }
 }
 
 .infosns {
-  // width: 100%;
+  width: 100%;
   padding: 2.5rem 5%;
   @include flexraw;
+  @media (min-width: 501px) and (max-width: 768px) {
+    flex-direction: column;
+  }
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 
   &-accesscontact {
     width: 60%;
     padding: 1rem;
+
+    @media (min-width: 501px) and (max-width: 768px) {
+      width: 100%;
+    }
+    @media (max-width: 500px) {
+      width: 100%;
+    }
     h1 {
       @extend %titleh1;
+      @media (max-width: 500px) {
+        font-size: $fontsize-2;
+      }
     }
     &-box {
       @include flexraw;
       justify-content: space-between;
+
+      @media (min-width: 769px) and (max-width: 1200px) {
+        flex-direction: column;
+      }
+
       &-map {
+        @media (max-width: 500px) {
+          display: none;
+        }
       }
       &-contact {
         width: 40%;
         font-family: $font-2;
         font-size: $fontsize-3;
         padding-top: 1rem;
+        @media (min-width: 501px) and (max-width: 768px) {
+          font-size: $fontsize-4;
+        }
+        @media (max-width: 500px) {
+          font-size: $fontsize-3-4;
+          width: 100%;
+        }
+
+        tr th {
+          text-align: start;
+        }
+
+        @media (min-width: 769px) and (max-width: 1200px) {
+          width: 100%;
+
+          tr th {
+            .openhours {
+              @include flexraw;
+              div {
+                padding-right: 1rem;
+              }
+            }
+          }
+        }
+        @media (max-width: 500px) {
+          width: 100%;
+
+          tr th {
+            .openhours {
+              @include flexraw;
+              div {
+                padding-right: 1rem;
+              }
+            }
+          }
+        }
       }
     }
   }
   &-followus {
     width: 45%;
     padding: 1rem;
+
+    @media (min-width: 501px) and (max-width: 768px) {
+      width: 100%;
+    }
+    @media (max-width: 500px) {
+      width: 100%;
+    }
+
     h1 {
       @extend %titleh1;
+      @media (max-width: 500px) {
+        font-size: $fontsize-2;
+      }
     }
     &-img {
       width: 100%;
 
       text-align: center;
+
+      @media (min-width: 501px) and (max-width: 768px) {
+        @include flexraw;
+      }
+      @media (max-width: 500px) {
+        @include flexraw;
+      }
+
       img {
         width: 20rem;
         padding-bottom: 2rem;
+        @media (min-width: 501px) and (max-width: 768px) {
+          width: 60%;
+        }
+        @media (max-width: 500px) {
+          width: 60%;
+        }
       }
       p {
         font-family: $font-2;
@@ -234,22 +434,46 @@
         @include flexraw;
         justify-content: center;
         align-items: center;
-      }
-      ion-icon {
-        font-size: 40px;
+
+        ion-icon {
+          font-size: 40px;
+        }
+        @media (min-width: 501px) and (max-width: 768px) {
+          width: 40%;
+        }
+        @media (max-width: 500px) {
+          width: 40%;
+        }
       }
     }
   }
 }
 .footer {
   background-color: $color-yellow;
+  width: 100%;
   height: 7rem;
   @include flexraw;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+  @media (min-width: 501px) and (max-width: 768px) {
+    height: 8rem;
+  }
 
   &-title {
     font-family: $font-1;
+    width: 30%;
+    @media (min-width: 501px) and (max-width: 768px) {
+      width: 40%;
+      height: 80%;
+      @include flexcolCenter;
+    }
+    @media (max-width: 500px) {
+      text-align: center;
+      position: static;
+      height: 60%;
+      width: 50%;
+    }
 
     top: 0;
     left: 40%;
@@ -257,12 +481,27 @@
     a {
       @include linkStyle;
       font-size: $fontsize-1;
+      @media (min-width: 501px) and (max-width: 768px) {
+        font-size: $fontsize-2;
+      }
+      @media (max-width: 500px) {
+        font-size: $fontsize-2-3;
+      }
     }
   }
   &-navigation {
     width: 30%;
+
     height: 100%;
     padding: 0 2rem;
+    @media (min-width: 501px) and (max-width: 768px) {
+      width: 40%;
+      height: 80%;
+    }
+    @media (max-width: 500px) {
+      height: 60%;
+      width: 30%;
+    }
 
     .footer-list {
       @include flexraw;
@@ -279,11 +518,26 @@
         @include linkStyle;
         font-size: $fontsize-3;
         font-family: $font-2;
+        @media (max-width: 500px) {
+          font-size: $fontsize-4;
+        }
       }
     }
   }
   &-copyright {
+    width: 30%;
     font-family: $font-2;
     font-size: $fontsize-4;
+    text-align: end;
+    @media (min-width: 501px) and (max-width: 768px) {
+      width: 100%;
+      text-align: end;
+      padding-right: 3rem;
+    }
+    @media (max-width: 500px) {
+      width: 100%;
+      height: 30%;
+      text-align: center;
+    }
   }
 }

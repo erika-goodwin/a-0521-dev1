@@ -12,8 +12,11 @@ $font-2: "Sawarabi Mincho", sans-serif;
 
 $fontsize-1: 50px;
 $fontsize-2: 35px;
+$fontsize-2-3: 28px;
 $fontsize-3: 20px;
+$fontsize-3-4: 18px;
 $fontsize-4: 15px;
+$fontsize-5: 13px;
 
 .\? {
   box-shadow: inset 4px 4px rgb(236, 15, 170), inset -4px -4px rgb(236, 15, 170);
@@ -54,4 +57,7 @@ $fontsize-4: 15px;
   font-size: $fontsize-1;
   text-align: center;
   padding-bottom: 2rem;
+}
+
+%hero-coment {
 }
